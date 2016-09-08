@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.1"
+
+  defaultConfig {
+    minSdkVersion 16
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+    ndk {
+      abiFilters "armeabi-v7a", "x86"
+    }
+  }
+  sourceSets {
+    main {
+      jniLibs.srcDirs  'src/main/libs'
+      jni.srcDirs = []
+    }
+  }
+}
+
+dependencies {
+  compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+  compile 'com.facebook.react:react-native:+'
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+}
