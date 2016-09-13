@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 import YaseaLive from './yesealive'
-import LrsLive from './lrslive'
+import LiveView from './live'
 
 class MainPage extends Component {
 
@@ -38,8 +38,8 @@ class MainPage extends Component {
 
         if (navigator) {
             navigator.push({
-                name: 'LrsLive',
-                component: LrsLive
+                name: 'LiveView',
+                component: LiveView
             });
         }
     }

@@ -15,31 +15,6 @@ public class RNLrsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void configureSetPortrait() {
-        RNLrsPublisher.getInstance().setCameraPortrait();
-    }
-
-    @ReactMethod
-    public void configureSetLandsapce() {
-        RNLrsPublisher.getInstance().setCameraLandsapce();
-    }
-
-    @ReactMethod
-    public void configureSetBitRate(int bitRate) {
-        RNLrsPublisher.getInstance().setBitRate(bitRate);
-    }
-
-    @ReactMethod
-    public void configureSetVideoFPS(int fps) {
-        RNLrsPublisher.getInstance().setVideoFPS(fps);
-    }
-
-    @ReactMethod
-    public void configureSetTargetVideoSize(int w, int h) {
-        RNLrsPublisher.getInstance().setTargetVideoSize(w, h);
-    }
-
-    @ReactMethod
     public void configureSetZoomByPercent(int percent) {
         RNLrsPublisher.getInstance().setZoomByPercent(percent);
     }
@@ -65,8 +40,8 @@ public class RNLrsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void startPublish(String url) {
-        RNLrsPublisher.getInstance().startStreaming(url);
+    public void startPublish() {
+        RNLrsPublisher.getInstance().startStreaming();
         RNLrsPublisher.getInstance().setWhiteningFilter();
     }
 

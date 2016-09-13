@@ -49,7 +49,8 @@ class YaseaView extends Component {
         return <NativeRNYaseaView {...this.props}/>;
     }
 
-    startPublish(url) {
+    startPublish(streamUrl, streamkey) {
+        let url = streamUrl + '/' + streamkey;
         RNYaseaModule.startPublish(url);
     }
 

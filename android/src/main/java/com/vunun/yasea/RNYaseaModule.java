@@ -97,7 +97,6 @@ public class RNYaseaModule extends ReactContextBaseJavaModule {
                 sendEvent(mReactContext, "network", "Weak");
             }
         });
-
     }
 
     @Override

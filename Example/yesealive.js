@@ -21,7 +21,7 @@ class YeseaLive extends Component {
 
     componentDidMount() {
         //this.refs.live.setOutputResolution(720, 960);
-        this.refs.live.startPublish("rtmp://120.76.201.53:1935/live/tt");
+        this.refs.live.startPublish("rtmp://120.76.201.53:1935/live", "tt");
     }
 
     onStopPublish() {
